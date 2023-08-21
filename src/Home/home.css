@@ -1,0 +1,105 @@
+
+body{
+    background-color:#1c1d1e;
+    --card-background: rgba(255, 255, 255, 0.06);
+    
+}
+
+.home{
+    flex-direction:column;
+    max-width: 60rem;
+    margin: 0 auto;
+}
+.contents{
+    padding: 0 1em;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.contents h2{
+    margin:0px;
+}
+.contents h5{
+    margin:0px;
+    margin-top:10px;
+}
+
+.widget{
+    display:flex;
+    justify-content:space-around;
+    background-color:rgba(255, 255, 255, 0.06);
+    width:15rem;
+    border-radius:30px;
+    margin-top:10px;
+}
+.widget p{
+
+    font-size:12px;
+}
+.progress{
+    margin-top:30px;
+    display:grid;
+    width:40rem;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 20px;
+}
+.gridItem{
+    display:flex;
+    align-items:center;
+    background-color: var(--card-background);
+    border-radius:8px;
+    border: 1px solid #424244;
+    gap:5px;
+    justify-content:space-around;
+
+}
+.gridIcon{
+    width:25px;
+    height:25px;
+}
+.numTasks{
+    display:flex;
+    flex-direction:column;
+}
+.numTasks h5{
+    margin:0px;
+
+}
+.numTasks p{
+    margin:0px;
+}
+.home-tasks{
+    display:flex;
+    flex-direction:column;
+    min-width:40rem;
+    background-color:rgba(255, 255, 255, 0.06);
+    margin-top:30px;
+    padding: 0 1.5em;
+    border-radius:10px;
+    border: 1px solid #424244;
+    overflow-y: auto;
+    height: 300px;
+}
+.home-tasks li {
+    display:flex;
+    list-style:none;
+    align-items:center;
+    justify-content:space-between;
+    margin:18px;
+    margin-top:-24px;
+    border-bottom: 1px solid #424244;
+}
+.checkbox {
+    height:15px;
+    width:15px;
+}
+.checkbox:hover{
+    color:green;
+    cursor:pointer;
+}
+.task-description{
+    display:flex;
+    align-items:center;
+    gap:5px;
+}
