@@ -47,6 +47,9 @@ function Home() {
   function countCompleted(){
     return (taskList.filter(task=>task.completed === true).length)
   }
+  function countToDo(){
+    return (taskList.filter(task=>task.completed === false).length)
+  }
   function addTask(e){
     if (e.key === 'Enter') {
       const newTask = {id:uuidv4(),taskName:e.target.value,completed:false};
@@ -72,9 +75,9 @@ function Home() {
           <p>{countCompleted()} Tasks Completed</p>
         </div>
         <div className="progress">
-          <GridItem icon = {<RiCalendarTodoFill className = 'gridIcon' />  } text="To do" num = "4" />
+          <GridItem icon = {<RiCalendarTodoFill className = 'gridIcon' />  } text="To do" num = {countToDo()} />
           <GridItem icon = {<TbProgressAlert className = 'gridIcon' />  } text="In progress" num = "10" />
-          <GridItem icon = {<AiOutlineCheckCircle className = 'gridIcon' />  } text="Completed" num = "2"/>
+          <GridItem icon = {<AiOutlineCheckCircle className = 'gridIcon' />  } text="Completed" num = {countCompleted()}/>
         </div>
         <div className="home-tasks">
             <h3>My Tasks</h3>
